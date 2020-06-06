@@ -1,0 +1,12 @@
+<h1 align = "center">Contestants</h1>
+<section class = "grid-container">
+  <% @contestants.each do |contestant|%>
+    <section class = "grid-item">
+      <h2><%= link_to contestant.name, "/contestants/#{contestant.id}" %></h2>
+      <h2><%= contestant.hometown %></h2>
+      <h2><%= contestant.age %></h2>
+    </section>
+  <% end %>
+  <p>These Contestants are from these hometowns: <%= @contestants.unique_hometowns %></p>
+
+</section>
